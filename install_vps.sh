@@ -58,11 +58,12 @@ echo -e "\n${BLUE}[3/5]${RESET} Installing OpenClaw Core (v2026.2.12)..."
 sudo npm install -g openclaw@2026.2.12
 ok "OpenClaw core installed!"
 
-# 4. Install Browser Modules (Playwright)
-echo -e "\n${BLUE}[4/5]${RESET} Installing Browser Dependencies..."
-echo -e "${YELLOW}Setting up system libraries for Chromium browser tools...${RESET}"
+# 4. Install Browser & Modules
+echo -e "\n${BLUE}[4/5]${RESET} Installing Chromium & Browser Modules..."
+echo -e "${YELLOW}Setting up Chromium for web research tools...${RESET}"
 sudo npx playwright install-deps chromium || true
-ok "Browser modules ready!"
+sudo npx playwright install chromium || true
+ok "Chromium and browser modules ready!"
 
 # 5. Finish
 echo -e "\n${GREEN}============================================${RESET}"
@@ -72,4 +73,4 @@ echo -e "${YELLOW}Next steps to get started:${RESET}"
 echo -e "1. Configure: ${CYAN}openclaw onboard${RESET}"
 echo -e "2. Run:       ${CYAN}openclaw gateway${RESET}"
 echo ""
-echo -e "${BLUE}Tip: Follow the guide in README.md for full Telegram Bot setup!${RESET}"
+echo -e "${BLUE}Tip: Follow the guide in README.md for Telegram, WhatsApp, or Discord setup!${RESET}"
