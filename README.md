@@ -56,15 +56,6 @@ Follow these exact steps to set up your bot:
 
 ---
 
-## 🛠 Start Your Bot
-To start or restart your bot after it has been stopped, simply run:
-```bash
-openclaw gateway
-```
-*Tip: If you want to see detailed logs while it's running, you can add the `--verbose` flag.*
-
----
-
 ### 🛑 Important: Preventing Auto-Start
 During the onboarding process, after you select `Yes` to restart/start, OpenClaw will attempt to launch the gateway immediately.
 - **To stop it**: Press **`Ctrl + C`** on your keyboard as soon as you see the gateway logs.
@@ -72,6 +63,15 @@ During the onboarding process, after you select `Yes` to restart/start, OpenClaw
   ```bash
   openclaw gateway stop
   ```
+
+---
+
+## 🛠 Start Your Bot
+To start or restart your bot after it has been stopped, simply run:
+```bash
+openclaw gateway
+```
+*Tip: If you want to see detailed logs while it's running, you can add the `--verbose` flag.*
 
 ---
 **Maintained by:** [Raflesia](https://github.com/raflesiaa)
