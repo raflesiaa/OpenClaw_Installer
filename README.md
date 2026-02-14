@@ -35,14 +35,6 @@ Follow these exact steps to set up your bot:
 7.  **Skills**: Select `No`.
 8.  **Restart/Start**: Select `Yes`.
 
-### 🛑 Important: Preventing Auto-Start
-After you select `Yes` to restart/start, OpenClaw will attempt to launch the gateway immediately.
-- **To stop it**: Press **`Ctrl + C`** on your keyboard as soon as you see the gateway logs.
-- **If it keeps running**: If you get an error saying the port is already in use, run this command to stop it manually:
-  ```bash
-  openclaw gateway stop
-  ```
-
 ---
 
 ## 🤖 Channel Setup Tutorials
@@ -70,6 +62,16 @@ To start or restart your bot after it has been stopped, simply run:
 openclaw gateway
 ```
 *Tip: If you want to see detailed logs while it's running, you can add the `--verbose` flag.*
+
+---
+
+### 🛑 Important: Preventing Auto-Start
+During the onboarding process, after you select `Yes` to restart/start, OpenClaw will attempt to launch the gateway immediately.
+- **To stop it**: Press **`Ctrl + C`** on your keyboard as soon as you see the gateway logs.
+- **If it keeps running**: If you get an error saying the port is already in use, run this command to stop it manually:
+  ```bash
+  openclaw gateway stop
+  ```
 
 ---
 **Maintained by:** [Raflesia](https://github.com/raflesiaa)
