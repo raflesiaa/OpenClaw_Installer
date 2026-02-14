@@ -1,44 +1,67 @@
 # 🦞 OpenClaw VPS/Local Installer
 
-This repository provides a professional automated script to install **OpenClaw** on any Linux VPS or Local PC (Ubuntu/Debian/WSL). This installer uses the stable version **2026.2.12** for the best user experience.
+Professional automated script to install **OpenClaw** on any Linux VPS or Local PC (Ubuntu/Debian/WSL).
 
 ## ✨ Features
-- 🚀 **Lightning Fast**: Full setup in under 2 minutes.
-- 📦 **Stable Version**: Pinned to OpenClaw `2026.2.12` to ensure consistent behavior.
-- 🛠 **Full Stack**: Automatically installs Node.js 22, FFmpeg, and Python.
-- 💻 **Universal**: Works on Local PC (Linux/WSL) and cloud VPS (Ubuntu/Debian).
+- 🚀 **Smart Detection**: Checks if Node.js is already installed (upgrades if version < 20).
+- 📦 **Stable Version**: Pinned to OpenClaw `2026.2.12`.
+- 🛠 **Full Modules**: Automatically installs FFmpeg, Python, Git, and Build Tools.
+- 💻 **Universal**: Works on Ubuntu, Debian, and WSL2.
 
 ## 📥 Quick Installation
 
-Run the following command in your terminal:
+Run this single command in your terminal:
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/raflesiaa/OpenClaw_Installer/main/install_vps.sh | bash
 ```
 
-Alternatively, you can clone the repository:
+---
 
+## ⚙️ Step-by-Step Configuration
+
+Once the installation is finished, follow these steps to set up your bot:
+
+### 1. Create your Telegram Bot
+- Open Telegram and chat with **[@BotFather](https://t.me/BotFather)**.
+- Use the `/newbot` command.
+- Save the **API Token** (looks like `123456:ABC-DEF...`).
+- Get your **Owner ID** by messaging **[@userinfobot](https://t.me/userinfobot)**.
+
+### 2. Run Onboarding
+Run the following command to link your AI provider and Telegram:
+```bash
+openclaw onboard
+```
+- **Select Provider**: Choose your AI (OpenAI, Google, Anthropic, or Jatevo).
+- **API Key**: Paste your AI provider's API key.
+- **Select Channel**: Choose **Telegram**.
+- **Telegram Token**: Paste the token from BotFather.
+- **Admin ID**: Paste your ID from userinfobot.
+
+### 3. Start the Gateway
+Launch your OpenClaw service:
+```bash
+openclaw gateway --verbose
+```
+
+### 4. Pairing & Verification
+- Send a message like "Hello" to your new bot on Telegram.
+- The bot will reply with a **Pairing Code**.
+- Approve the session in your terminal:
+  ```bash
+  openclaw pairing approve telegram <CODE>
+  ```
+- Your bot is now linked and ready! 🚀
+
+## 🛠 Manual Installation
+If you prefer to clone the repo:
 ```bash
 git clone https://github.com/raflesiaa/OpenClaw_Installer
 cd OpenClaw_Installer
 chmod +x install_vps.sh
 ./install_vps.sh
 ```
-
-## 🤖 Configuration
-
-After the installation is complete, follow these steps:
-
-1. **Setup**: Run `openclaw onboard` to configure your AI provider and Telegram bot.
-2. **Start**: Run `openclaw gateway --verbose` to launch the service.
-3. **Pairing**: If using Telegram, chat with your bot to receive a pairing code, then approve it with:
-   ```bash
-   openclaw pairing approve telegram <YOUR_CODE>
-   ```
-
-## 📌 Requirements
-- OS: Ubuntu 20.04+ / Debian 11+ / WSL2
-- Minimum 1GB RAM recommended.
 
 ---
 **Maintained by:** [Raflesia](https://github.com/raflesiaa)
