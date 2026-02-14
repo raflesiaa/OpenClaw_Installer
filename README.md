@@ -42,7 +42,7 @@ openclaw onboard
 ### 3. Start the Gateway
 Launch your OpenClaw service:
 ```bash
-openclaw gateway --verbose
+openclaw gateway
 ```
 
 ### 4. Pairing & Verification
