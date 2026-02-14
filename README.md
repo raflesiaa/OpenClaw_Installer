@@ -3,9 +3,9 @@
 Professional automated script to install **OpenClaw** on any Linux VPS or Local PC (Ubuntu/Debian/WSL).
 
 ## ✨ Features
-- 🚀 **Full Browser Support**: Automatically installs Chromium and its system dependencies for web research.
+- 🚀 **Smart Detection**: Detects and installs/upgrades Node.js to v22 (LTS).
 - 📦 **Stable Version**: Pinned to OpenClaw `2026.2.12`.
-- 🛠 **Smart Detection**: Detects and installs/upgrades Node.js to v22 (LTS).
+- 🛠 **Full Modules**: Automatically installs Chromium, FFmpeg, and Build Tools.
 - 📱 **Multi-Channel**: Optimized for Telegram, WhatsApp, and Discord.
 
 ## 📥 Quick Installation
@@ -28,13 +28,20 @@ openclaw onboard
 Follow these exact steps to set up your bot:
 1.  **Security Check**: Select `Yes` to acknowledge risks.
 2.  **Mode**: Select `QuickStart`.
-3.  **Config**: Select `Use existing values` (if prompted).
-4.  **AI Provider**: Select your provider (OpenAI, Google, Anthropic, or Jatevo) and paste your API Key.
+3.  **Config**: Select `Use existing values`.
+4.  **AI Provider**: Select your provider and paste your API Key.
 5.  **AI Model**: Select your preferred model.
 6.  **Channel**: Select your preferred channel (**Telegram**, **WhatsApp**, or **Discord**).
-7.  **Skills**: Select `No` (you can configure skills later).
-8.  **Restart**: Select `Yes` to apply changes.
-9.  **Others**: Keep everything else as `Default`.
+7.  **Skills**: Select `No`.
+8.  **Restart/Start**: Select `Yes`.
+
+### 🛑 Important: Preventing Auto-Start
+After you select `Yes` to restart/start, OpenClaw will attempt to launch the gateway immediately.
+- **To stop it**: Press **`Ctrl + C`** on your keyboard as soon as you see the gateway logs.
+- **If it keeps running**: If you get an error saying the port is already in use, run this command to stop it manually:
+  ```bash
+  openclaw gateway stop
+  ```
 
 ---
 
@@ -43,33 +50,24 @@ Follow these exact steps to set up your bot:
 ### 1. Telegram Bot
 - Create a bot via **[@BotFather](https://t.me/BotFather)** to get your **Bot Token**.
 - Get your **Owner ID** via **[@userinfobot](https://t.me/userinfobot)**.
-- Input these during `openclaw onboard`.
+- Input these during onboarding.
 
 ### 2. WhatsApp
-- During `openclaw onboard`, select **WhatsApp**.
+- During onboarding, select **WhatsApp**.
 - Start the gateway: `openclaw gateway`.
-- A **QR Code** will appear in your terminal.
-- Open WhatsApp on your phone -> Linked Devices -> **Link a Device** and scan the QR code.
-- *Note: We recommend using a dedicated number/eSIM for your bot.*
+- Scan the **QR Code** that appears in your terminal using your phone.
 
 ### 3. Discord
-- Go to the **[Discord Developer Portal](https://discord.com/developers/applications)**.
-- Create a "New Application" and go to the "Bot" tab.
-- Copy your **Bot Token**.
-- Enable "Message Content Intent" under the Privileged Gateway Intents section.
-- Input the token during `openclaw onboard`.
+- Create a Bot in the **[Discord Developer Portal](https://discord.com/developers/applications)**.
+- Enable **Message Content Intent**.
+- Copy your **Bot Token** and input it during onboarding.
 
 ---
 
 ## 🛠 Start Your Bot
-After configuration, simply run:
+Once you are ready to launch, simply run:
 ```bash
 openclaw gateway
-```
-
-If you receive a **Pairing Code** on your chat channel, approve it in the terminal with:
-```bash
-openclaw pairing approve <channel> <CODE>
 ```
 
 ---
