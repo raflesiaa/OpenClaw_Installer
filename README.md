@@ -65,10 +65,11 @@ After you select `Yes` to restart/start, OpenClaw will attempt to launch the gat
 ---
 
 ## 🛠 Start Your Bot
-Once you are ready to launch, simply run:
+To start or restart your bot after it has been stopped, simply run:
 ```bash
 openclaw gateway
 ```
+*Tip: If you want to see detailed logs while it's running, you can add the `--verbose` flag.*
 
 ---
 **Maintained by:** [Raflesia](https://github.com/raflesiaa)
