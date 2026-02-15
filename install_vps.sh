@@ -22,6 +22,7 @@ echo " | |_) |/ _\` | |_| |_| |/ _ \/ __| |/ _\` |"
 echo " |  _ <| (_| |  _|  _| |  __/\__ \ | (_| |"
 echo " |_| \_\\__,_|_| |_| |_|\___||___/_|\__,_|"
 echo -e "${RESET}"
+sleep 3
 
 echo -e "${CYAN}============================================${RESET}"
 echo -e "${CYAN}      OPENCLAW VPS/LOCAL AUTO-INSTALLER     ${RESET}"
