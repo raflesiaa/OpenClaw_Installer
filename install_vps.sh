@@ -32,6 +32,8 @@ ok() { echo -e "${GREEN}✔ $1${RESET}"; }
 
 # 1. Update & Install Basic Tools
 echo -e "\n${BLUE}[1/5]${RESET} Checking System Dependencies..."
+# Fix common GPG issues (like Yarn) before updating
+sudo rm -f /etc/apt/sources.list.d/yarn.list || true
 sudo apt update -y
 sudo apt install -y curl git build-essential ffmpeg python3 pkg-config make g++ ca-certificates
 ok "System dependencies ready!"
