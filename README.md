@@ -13,7 +13,7 @@ Professional automated script to install **OpenClaw** on any Linux VPS or Local 
 Run this single command in your terminal:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/raflesiaa/OpenClaw_Installer/main/install_vps.sh | bash
+curl -sSL https://raw.githubusercontent.com/raflesiaa/OpenClaw_Installer/main/installer.sh | bash
 ```
 
 ---
