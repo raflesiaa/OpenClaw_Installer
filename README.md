@@ -43,6 +43,13 @@ Follow these exact steps to set up your bot:
 - Create a bot via **[@BotFather](https://t.me/BotFather)** to get your **Bot Token**.
 - Get your **Owner ID** via **[@userinfobot](https://t.me/userinfobot)**.
 - Input these during onboarding.
+- **Initialize & Pair**:
+  1. Once the gateway is running, **send a message** (e.g., "Hello") to your bot on Telegram.
+  2. The bot will send you a **Pairing Code**.
+  3. Approve the code in your terminal with:
+     ```bash
+     openclaw pairing approve telegram <YOUR_CODE>
+     ```
 
 ### 2. WhatsApp
 - During onboarding, select **WhatsApp**.
