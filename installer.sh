@@ -17,11 +17,11 @@ RED="\033[1;31m"
 RESET="\033[0m"
 
 echo -e "${MAGENTA}"
-echo "  ____        _  __ _           _ "
-echo " |  _ \  __ _/ _/ _| | ___  ___(_) __ _ "
-echo " | |_) |/ _\` | |_| |_| |/ _ \/ __| |/ _\` |"
-echo " |  _ <| (_| |  _|  _| |  __/\__ \ | (_| |"
-echo " |_| \_\\__,_|_| |_| |_|\___||___/_|\__,_|"
+echo "██████  █████  ███████ ██      ███████ ███████ ██  █████ "
+echo "██   ██ ██   ██ ██      ██      ██      ██      ██ ██   ██"
+echo "██████  ███████ █████   ██      █████   ███████ ██ ███████"
+echo "██   ██ ██   ██ ██      ██      ██           ██ ██ ██   ██"
+echo "██   ██ ██   ██ ██      ███████ ███████ ███████ ██ ██   ██"
 echo -e "${RESET}"
 sleep 3
 
@@ -37,7 +37,7 @@ if [ -f /etc/os-release ]; then
     if [ "$ID" = "ubuntu" ]; then
         VERSION_MAJOR=$(echo $VERSION_ID | cut -d'.' -f1)
         if [ "$VERSION_MAJOR" -lt 20 ]; then
-            echo -e "${RED}[ERROR] Your Ubuntu version ($VERSION_ID) is too old.${RESET}"
+            echo -e "${RED}[ERROR] Your Ubuntu version ($VERSION_ID) ) is too old.${RESET}"
             echo -e "${YELLOW}OpenClaw and Node.js 22 require at least Ubuntu 20.04.${RESET}"
             exit 1
         fi
